@@ -1,0 +1,29 @@
+package atividade.pkg8;
+
+import java.util.Scanner;
+
+public class Atividade8 {
+
+    public static void impressão(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(i + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner cachorolambcodigo = new Scanner(System.in);
+        System.out.print("Digite um número inteiro: ");
+
+        try {
+            int n = cachorolambcodigo.nextInt();
+            impressão(n);
+        } catch (Exception e) {
+            System.out.println("DIGITE UM NÚMERO VALIDO.");
+        } finally {
+        }
+    }
+
+}
