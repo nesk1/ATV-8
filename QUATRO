@@ -1,0 +1,25 @@
+package atividade.pkg8;
+
+import java.util.Scanner;
+
+public class Atividade8 {
+
+    public static char verificarPN(int num) {
+        if (num > 0) {
+            return 'P';
+        } else {
+            return 'N';
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner caiolindo = new Scanner(System.in);
+
+        System.out.print("Digite um número: ");
+        int num = caiolindo.nextInt();
+
+        char result = verificarPN(num);
+        System.out.println("O número é: " + result);
+
+    }
+}
