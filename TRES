@@ -11,7 +11,6 @@ public class Atividade8 {
     public static void main(String[] args) {
         Scanner cachoro = new Scanner(System.in);
 
-        // Solicita ao usuário para inserir três números
         System.out.print("Digite o primeiro número: ");
         int n1 = cachoro.nextInt();
 
@@ -21,7 +20,6 @@ public class Atividade8 {
         System.out.print("Digite o terceiro número: ");
         int n3 = cachoro.nextInt();
 
-        // Chama a função somarTresNumeros() com os números inseridos e imprime o resultado
         int resultado = somatres(n1, n2, n3);
         System.out.println("A soma dos três números é: " + resultado);
 
