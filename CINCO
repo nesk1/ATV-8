@@ -1,0 +1,31 @@
+package atividade.pkg8;
+
+import java.util.Scanner;
+
+public class Atividade8 {
+
+    public static double somaI(double taxaI, double custo) {
+
+        double impostoSobreCusto = custo * (taxaI / 100);
+
+        double custoT = custo + impostoSobreCusto;
+
+        return custoT;
+    }
+
+    public static void main(String[] args) {
+        Scanner cachoro = new Scanner(System.in);
+
+        // Solicita ao usuário para inserir a taxa de imposto e o custo do item
+        System.out.print("Digite a taxa de imposto sobre vendas (%): ");
+        double taxaI = cachoro.nextDouble();
+
+        System.out.print("Digite o custo do item antes do imposto: ");
+        double custoI = cachoro.nextDouble();
+
+        // Chama a função somaImposto() com os valores inseridos e imprime o custo total após adicionar o imposto
+        double custoT = somaI(taxaI, custoI);
+        System.out.println("O custo total após adicionar o imposto é: " + custoT);
+
+    }
+}
