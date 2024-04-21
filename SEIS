@@ -1,0 +1,43 @@
+package atividade.pkg8;
+
+import java.util.Scanner;
+
+public class Atividade8 {
+
+    public static String converterHorario(int hora, int minuto) {
+        String periodo;
+
+        if (hora >= 12) {
+            periodo = "P.M.";
+            if (hora > 12) {
+                hora -= 12;
+            }
+        } else {
+            periodo = "A.M.";
+            if (hora == 0) {
+                hora = 12;
+            }
+        }
+
+        return String.format("%d:%02d %s", hora, minuto, periodo);
+    }
+
+    public static void main(String[] args) {
+        Scanner cachorohora = new Scanner(System.in);
+
+        char continuar;
+        do {
+            System.out.print("Digite a hora (formato 24 horas): ");
+            int hora = cachorohora.nextInt();
+            System.out.print("Digite os minutos: ");
+            int minuto = cachorohora.nextInt();
+
+            String horario12Horas = converterHorario(hora, minuto);
+            System.out.println("Horário em formato de 12 horas: " + horario12Horas);
+
+            System.out.print("Deseja continuar? (S/N): ");
+            continuar = cachorohora.next().charAt(0);
+        } while (continuar == 'S' || continuar == 's');
+
+    }
+}
